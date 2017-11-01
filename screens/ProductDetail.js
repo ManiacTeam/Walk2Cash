@@ -99,7 +99,7 @@ class ProductDetail extends Component {
             
                 <View style={styles.claimedButton}>
                   <Text 
-                    style={{ textAlign: 'center', backgroundColor: 'transparent', fontSize: 18, color: 'white', marginTop: 3 }}
+                    style={{ textAlign: 'center', backgroundColor: 'transparent', fontSize: 18, color: '#81848F', marginTop: 3 }}
                   >
                     Claim
                   </Text>
@@ -134,8 +134,8 @@ const styles = StyleSheet.create({
     width: '80%',
     borderRadius: 20,
     borderWidth: 2,
-    backgroundColor: '#f0cedc',
-    borderColor: '#f0cedc'
+    backgroundColor: '#171C2F',
+    borderColor: '#2C3451'
   },
   container: {
     flex : 1,

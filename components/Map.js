@@ -113,6 +113,8 @@ class Map extends React.Component {
           <View style={{ flex: 1 }} >
             <Image source={require('../assets/images/minus64.png')} style={styles.minusStyle} />
           </View>
+                    
+                      
 
           <View style={{ flex: 3, alignSelf: 'stretch' }}>
             <Grid>
@@ -121,9 +123,15 @@ class Map extends React.Component {
                   <Text style={styles.textTitle}>{pinSelected.title}</Text>
                 </View>
 
-                <View style={{ marginTop: 20, paddingLeft: 30 }}>
-                    <Text style={{ fontSize: 30 }}>Rating(4.5)</Text>
-                </View>
+                <View style = {{marginTop : 20,paddingLeft : 30}}> 
+                <Text style={{color : '#EEC449'}}>
+                     Rating(4.5)
+                </Text>  
+                <Image
+                  style={{ width: 124, height: 17, marginLeft: -10, marginTop: 10 }}
+                  source={(require('../images/stars/4.5.png'))}
+                />
+              </View>
               </Col>
 
               <Col size={1} style={{ justifyContent: 'center', alignItems: 'center' }}>
@@ -133,14 +141,14 @@ class Map extends React.Component {
 
           </View>
 
-
-          <View style={{ flex: 2 }}>
-            <Text style={{ color: 'white' }}>{pinSelected.address}</Text>
+          <View style= {{flex: 2}}>  
+            <Text style = {{color : 'white',paddingLeft : 20,paddingRight : 20}}>{pinSelected.address}</Text>
           </View>
 
-          <View style={styles.claimButton}>
-            <Text
-              onPress={() => { this.handleClaim(this.state.indexSelected) }}
+          <View style= {[styles.claimButton]}>  
+            <Text 
+               onPress = {() => { this.handleClaim(this.state.indexSelected) } }
+               style={{color: 'white', textAlign: 'center', fontSize: 20, backgroundColor: 'transparent'}}
             >
               Claim
             </Text>
@@ -257,14 +265,17 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent'
   },
   claimButton: {
-    backgroundColor: '#F5318D',
+
+    backgroundColor : '#F5318D',
     marginTop: 10,
     paddingTop: 3,
-    height: 35,
+    height: 40,
     width: 250,
     borderRadius: 10,
     borderWidth: 1,
     borderColor: '#F5318D',
+    marginBottom: 30,
+    justifyContent: 'center'
   },
 
 });
