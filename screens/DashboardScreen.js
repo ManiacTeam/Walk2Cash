@@ -145,18 +145,24 @@ class DashboardScreen extends Component {
             <Pie
               radius={100}
               innerRadius={86}
-              series={[this.state.currentStepCount * 100 / 8000]}
+              series={[this.state.currentStepCount * 100 / 10000]}
               colors={['#F5318D']}
               backgroundColor='#364060'
             />
             <View style={styles.gauge}>
-              <Text style={styles.gaugeGoal}>Goal: 8000</Text>
+              <Text style={styles.gaugeGoal}>Goal: 10000</Text>
               <Text style={styles.gaugeText}>{this.state.currentStepCount} steps</Text>
             </View>
           </View>
           <Grid style={{ marginTop: 10 }}>
-            <Col><Text style={styles.statHead}>Hi1</Text></Col>
-            <Col><Text style={styles.statHead}>Hi2</Text></Col>
+            <Col>
+              <Text style = {styles.statDescribe}> Calories </Text>
+              <Text style={styles.statHead}>{this.state.currentStepCount/2} kcal</Text>
+            </Col>
+            <Col>
+              <Text style = {styles.statDescribe}> Distance </Text>
+              <Text style={styles.statHead}>{this.state.currentStepCount * 0.74/1000} km</Text>
+            </Col>
           </Grid>
         </View>
       );
@@ -287,8 +293,14 @@ const styles = StyleSheet.create({
   },
   statHead: {
     color: 'white',
+    paddingTop : 2,
     textAlign: 'center',
     fontWeight: 'bold',
+    backgroundColor: 'transparent'
+  },
+  statDescribe: {
+    color: '#364069',
+    textAlign: 'center',
     backgroundColor: 'transparent'
   },
   slide: {
