@@ -300,6 +300,7 @@ const styles = StyleSheet.create({
   },
   statDescribe: {
     color: '#364069',
+    fontWeight : 'bold',
     textAlign: 'center',
     backgroundColor: 'transparent'
   },
