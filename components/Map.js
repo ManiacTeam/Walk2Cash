@@ -113,14 +113,7 @@ class Map extends React.Component {
           <View style={{ flex: 1 }} >
             <Image source={require('../assets/images/minus64.png')} style={styles.minusStyle} />
           </View>
-                    <View style = {{marginTop : 20,paddingLeft : 30}}> 
-                      <Text style={{color : '#EEC449'}}>
-                           Rating(4.5)
-                      </Text>  
-                      <Image
-                        style={{ width: 124, height: 17, marginLeft: -10, marginTop: 10 }}
-                        source={(require('../images/stars/4.5.png'))}
-                      />
+                    
                       
 
           <View style={{ flex: 3, alignSelf: 'stretch' }}>
@@ -130,9 +123,15 @@ class Map extends React.Component {
                   <Text style={styles.textTitle}>{pinSelected.title}</Text>
                 </View>
 
-                <View style={{ marginTop: 20, paddingLeft: 30 }}>
-                    <Text style={{ fontSize: 30 }}>Rating(4.5)</Text>
-                </View>
+                <View style = {{marginTop : 20,paddingLeft : 30}}> 
+                <Text style={{color : '#EEC449'}}>
+                     Rating(4.5)
+                </Text>  
+                <Image
+                  style={{ width: 124, height: 17, marginLeft: -10, marginTop: 10 }}
+                  source={(require('../images/stars/4.5.png'))}
+                />
+              </View>
               </Col>
 
               <Col size={1} style={{ justifyContent: 'center', alignItems: 'center' }}>
@@ -266,11 +265,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent'
   },
   claimButton: {
-<<<<<<< HEAD
-    backgroundColor: '#F5318D',
-=======
+
     backgroundColor : '#F5318D',
->>>>>>> modal style
     marginTop: 10,
     paddingTop: 3,
     height: 40,
@@ -278,11 +274,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 1,
     borderColor: '#F5318D',
-<<<<<<< HEAD
-=======
     marginBottom: 30,
     justifyContent: 'center'
->>>>>>> modal style
   },
 
 });
